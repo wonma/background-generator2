@@ -16,19 +16,24 @@ function initializeGradient(col1, col2) {
   hexRight.textContent = col2;
 }
 
-function setGradient() {
-  body.style.background =
-    'linear-gradient(to right,' +
-    colorPicker1.value +
-    ', ' +
-    colorPicker2.value +
-    ')';
-  hexLeft.textContent = colorPicker1.value;
-  hexRight.textContent = colorPicker2.value;
+function changeColor(location, newValue) {
+  if (location === 'left') {
+    body.style.background =
+      'linear-gradient(to right, ' + newValue + ', ' + colorPicker2.value + ')';
+    hexLeft.textContent = newValue;
+  } else {
+    body.style.background =
+      'linear-gradient(to right, ' + colorPicker1.value + ', ' + newValue + ')';
+    hexRight.textContent = newValue;
+  }
 }
 
 initializeGradient(initialCol1, initialCol2);
 
-colorPicker1.addEventListener('input', setGradient);
+colorPicker1.addEventListener('input', e => {
+  changeColor('left', e.target.value);
+});
 
-colorPicker2.addEventListener('input', setGradient);
+colorPicker2.addEventListener('input', e => {
+  changeColor('right', e.target.value);
+});
