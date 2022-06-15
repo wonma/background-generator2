@@ -4,16 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Background Generator</title>
   </head>
   <body id="body" class="body">
     <h1>Background Generator</h1>
 
-    <label for="favColor1">Select your primary color:</label>
-    <input type="color" id="favColor1" name="favColor1" />
-    <label for="favColor2">Select your secondary color:</label>
-    <input type="color" id="favColor2" name="favColor2" />
+    <div class="select-wrapper">
+      <label for="favColor1">Select your left color:</label>
+      <input type="color" id="favColor1" name="favColor1" />
+      <label for="favColor2">Select your right color:</label>
+      <input type="color" id="favColor2" name="favColor2" />
+    </div>
+
+    <div class="hexbox-wrapper">
+      <p id="hexLeft" class="hex hex-left"></p>
+      <p id="hexRight" class="hex hex-right"></p>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,4 +1,31 @@
 body {
   height: 100vh;
-  background-image: linear-gradient(#e66465, #9198e5);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  // background-image: linear-gradient(#e66465, #9198e5);
+}
+
+h1 {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 300;
+  height: 100px;
+}
+
+.select-wrapper {
+  width: 100%;
+}
+
+.hexbox-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.hex {
+  flex-basis: 50%;
+  font-size: 3rem;
 }
