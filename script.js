@@ -4,5 +4,4 @@ var colorPicker2 = document.querySelector('#favColor2');
 
 colorPicker1.addEventListener('input', e => {
   var changedColor = e.target.value;
-  body.style.
 });
